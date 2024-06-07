@@ -53,8 +53,9 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                     </div>
 
-                                    <form class="row g-3 needs-validation" action="" novalidate>
-
+                                    <form class="row g-3 needs-validation" action="{{ url('/proseslogin') }}"
+                                        method="POST" novalidate>
+                                        @csrf
                                         <div class="col-12">
                                             <label for="yourUsername" class="form-label">Email</label>
                                             <div class="input-group has-validation">
