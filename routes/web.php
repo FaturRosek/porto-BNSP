@@ -20,12 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/proseslogin', [LoginController::class, 'autentikasi']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'buatakun'])->name('register');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-// Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
-// Route::post('/store', [ProdukController::class, 'store'])->name('store');
-Route::resource('/produk', ProdukController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('/produk', ProdukController::class);
+});

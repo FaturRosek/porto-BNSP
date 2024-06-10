@@ -43,7 +43,6 @@ class ProdukController extends Controller
         }
 
         Produk::create([
-            // 'id' => Uuid::uuid4()->toString(),
             'nama' => $request->nama,
             'harga' => $request->harga,
             'prosesor' => $request->prosesor,
@@ -74,16 +73,6 @@ class ProdukController extends Controller
     }
     public function update(Request $request, $id)
     {
-        // dd($request->all());
-        $request->validate([
-            'nama' => 'required|max:255|string',
-            'harga' => 'required|max:255|string',
-            'ukuran' => 'required|max:255|string',
-            'prosesor' => 'required|max:255|string',
-            'memori' => 'required|max:255|string',
-            'storage' => 'required|max:255|string',
-            'gambar' => 'nullable|mimes:png,jpg,jpeg,webp|max:3048',
-        ]);
 
         $produk = Produk::find($id);
 
@@ -101,17 +90,27 @@ class ProdukController extends Controller
             }
         }
 
-        $produk->update([
-            'nama' => $request->nama,
-            'harga' => $request->harga,
-            'prosesor' => $request->prosesor,
-            'memori' => $request->memori,
-            'ukuran' => $request->ukuran,
-            'storage' => $request->storage,
-            'gambar' => $filename ? $path . $filename : $produk->gambar,
-        ]);
+        $produk->nama = $request->nama;
+        $produk->harga = $request->harga;
+        $produk->prosesor = $request->prosesor;
+        $produk->memori = $request->memori;
+        $produk->ukuran = $request->ukuran;
+        $produk->storage = $request->storage;
+        $produk->gambar = $filename ? $path . $filename : $produk->gambar;
+        $produk->save();
 
         return redirect()->route('produk.index')->with('status', 'Data Berhasil Diupdate');
+        // $produk->update([
+        //     'nama' => $request->nama,
+        //     'harga' => $request->harga,
+        //     'prosesor' => $request->prosesor,
+        //     'memori' => $request->memori,
+        //     'ukuran' => $request->ukuran,
+        //     'storage' => $request->storage,
+        //     'gambar' => $filename ? $path . $filename : $produk->gambar,
+        // ]);
+
+
     }
 
     public function show()

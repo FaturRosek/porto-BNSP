@@ -12,7 +12,7 @@
             </nav>
         </div><!-- End Page Title -->
         @session('status')
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-primary" role="alert">
                 {{ $value }}
             </div>
         @endsession
@@ -50,9 +50,13 @@
                                 <img src="{{ asset($p->gambar) }}" style="width: 50px; height:50px;" alt="Img" />
                             </td>
                             <td>
-                                <a href="{{ route('produk.edit', $p->id) }}" class="btn btn-warning">
+                                {{-- <a href="{{ route('produk.edit', $p->id) }}" class="btn btn-warning">
                                     <i class="fas fa-edit"></i>
-                                </a>
+                                </a> --}}
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editModal{{ $p->id }}">
+                                    <i class="fas fa-edit"></i>
+                                </button>
                                 <form action="{{ route('produk.destroy', $p->id) }}" method="POST" class="d-inline"
                                     onsubmit="return confirm('Delete?')">
                                     @csrf
@@ -64,6 +68,7 @@
                         </tr>
                     @endforeach
                 </tbody>
+                @include('produk.edit')
             </table>
             @include('produk.create')
         </div>

@@ -48,8 +48,14 @@
                                     <div class="pt-4 pb-2">
                                         <h5 class="card-title text-center pb-0 fs-4 mb-3">Create an Account</h5>
                                     </div>
-
-                                    <form class="row g-3 needs-validation" novalidate>
+                                    @session('status')
+                                        <div class="alert alert-primary">
+                                            {{ $value }}
+                                        </div>
+                                    @endsession
+                                    <form action="{{ route('register') }}" method="POST"
+                                        class="row g-3 needs-validation" novalidate>
+                                        @csrf
                                         <div class="col-12">
                                             <label for="yourName" class="form-label">Username</label>
                                             <input type="text" name="name" class="form-control" id="yourName"
