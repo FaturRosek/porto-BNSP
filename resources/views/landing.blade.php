@@ -12,8 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
         rel="stylesheet" />
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 </head>
 
 <body>
@@ -128,11 +126,6 @@
             </section>
         </article>
     </main>
-
-    <!--
-    - #FOOTER
-  -->
-
     <footer class="footer" id="footer">
         <div class="container">
 
@@ -174,22 +167,11 @@
                         </a>
                     </li>
                 </ul>
-
-                <p class="copyright">
-                    &copy; 2024 <a href="#">FaturRs</a>. All Rights Reserved
-                </p>
             </div>
         </div>
     </footer>
 
-    <!--
-    - custom js link
-  -->
     <script src="./assets/js/script.js"></script>
-
-    <!--
-    - ionicon link
-  -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
