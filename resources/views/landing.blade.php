@@ -66,15 +66,15 @@
 
                 </div>
             </section>
-            <section class="section featured-car" id="list-laptop">
+            <section class="section featured-laptop" id="list-laptop">
                 <div class="container">
                     <div class="title-wrapper">
                         <h2 class="h2 section-title">List Laptop</h2>
                     </div>
-                    <ul class="featured-car-list">
+                    <ul class="featured-laptop-list">
                         @foreach ($produk as $p)
                             <li>
-                                <div class="featured-car-card">
+                                <div class="featured-laptop-card">
                                     <figure class="card-banner"
                                         style="width: 100%; height: auto; background-image: url('{{ asset($p->gambar) }}'); 
                                         background-size: cover; background-position: center;">
@@ -149,23 +149,6 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-skype"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
