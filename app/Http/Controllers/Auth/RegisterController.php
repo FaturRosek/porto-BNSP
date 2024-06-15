@@ -26,12 +26,7 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
 
         $user->save();
-        // User::create([
-        //     'id' => Uuid::uuid4()->toString(),
-        //     'username' => $request->name,
-        //     'email' => $request->email,
-        //     'password' => $request->password,
-        // ]);
+
         return back()->with('status', 'Akun Berhasil Ditambahkan, Silahkan Login!');
     }
 }
