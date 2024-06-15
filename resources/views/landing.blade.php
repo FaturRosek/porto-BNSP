@@ -30,9 +30,6 @@
                     <li>
                         <a href="#list-laptop" class="navbar-link" data-nav-link>Produk</a>
                     </li>
-                    <li>
-                        <a href="#footer" class="navbar-link" data-nav-link>Contact us</a>
-                    </li>
                 </ul>
             </nav>
 
@@ -69,7 +66,7 @@
             <section class="section featured-laptop" id="list-laptop">
                 <div class="container">
                     <div class="title-wrapper">
-                        <h2 class="h2 section-title">List Laptop</h2>
+                        <h2 class="h2 section-title">Laptop</h2>
                     </div>
                     <ul class="featured-laptop-list">
                         @foreach ($produk as $p)
@@ -126,33 +123,6 @@
             </section>
         </article>
     </main>
-    <footer class="footer" id="footer">
-        <div class="container">
-
-            <div class="footer-bottom">
-                <ul class="social-list">
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.instagram.com/rs_ftr" class="social-link">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </footer>
 
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
