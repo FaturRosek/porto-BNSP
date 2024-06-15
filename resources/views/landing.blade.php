@@ -18,7 +18,6 @@
     <header class="header" data-header>
         <div class="container">
             <div class="overlay" data-overlay></div>
-
             <a href="#" class="logo">
                 <img src="./assets/images/logo2.png" alt="logo" class="logo-img" />
             </a>
@@ -32,18 +31,11 @@
                     </li>
                 </ul>
             </nav>
-
             <div class="header-actions">
                 <a href="{{ url('/login') }}" class="btn" aria-labelledby="aria-label-txt">
                     <ion-icon name="person-outline"></ion-icon>
                     <span id="aria-label-txt">Login</span>
                 </a>
-
-                <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
-                    <span class="one"></span>
-                    <span class="two"></span>
-                    <span class="three"></span>
-                </button>
             </div>
         </div>
     </header>
