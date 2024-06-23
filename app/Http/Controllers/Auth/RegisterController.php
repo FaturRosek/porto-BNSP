@@ -15,18 +15,4 @@ class RegisterController extends Controller
     {
         return view('auth.register');
     }
-
-    public function buatakun(Request $request)
-    {
-        $user = new User();
-
-        $user->id = Uuid::uuid4()->toString();
-        $user->username = $request->name;
-        $user->email = $request->email;
-        $user->password = Hash::make($request->password);
-
-        $user->save();
-
-        return back()->with('status', 'Akun Berhasil Ditambahkan, Silahkan Login!');
-    }
 }
